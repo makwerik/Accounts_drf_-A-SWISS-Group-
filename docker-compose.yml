@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    volumes:
+      - .:/app  # примонтируем корневую директорию проекта в /app внутри контейнера
+    working_dir: /app/myproject  # указываем рабочую директорию внутри контейнера
+    ports:
+      - "8000:8000"  # пробрасываем порт 8000 для доступа к приложению
+    environment:
+      - DEBUG=1
+    command: python manage.py runserver 0.0.0.0:8000
