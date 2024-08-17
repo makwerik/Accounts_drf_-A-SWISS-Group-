@@ -30,17 +30,20 @@ cd A_SWISS_GROUP
 ```
 
 <h3>2. Запуск контейнеров</h3>
+
 ```bash
 docker-compose up --build
 ```
 
 <h3>3. Применение миграций</h3>
 Если миграции не были применены автоматически, выполните команду:
+
 ```bash
 pip install -r requirements.txt
 ```
 
 <h3>4. Применение миграций</h3>
+
 ```bash
 docker-compose up -d
 docker-compose exec web python manage.py migrate
@@ -48,12 +51,14 @@ docker-compose exec web python manage.py migrate
 
 <h3>4. Создание суперпользователя</h3>
 Для доступа к админке Django выполните команду для создания суперпользователя:
+
 ```bash
 docker-compose up -d
 docker-compose exec web python manage.py createsuperuser
 ```
 
 <h3>5. Запуск тестов</h3>
+
 ```bash
 docker-compose up -d
 docker-compose exec web python manage.py test
@@ -71,27 +76,32 @@ cd A_SWISS_GROUP
 ```
 
 <h3>2. Создание и активация виртуального окружения</h3>
+
 ```bash
 python -m venv venv
 source venv/bin/activate  # для Windows: venv\Scripts\activate
 ```
 
 <h3>3. Установка зависимостей</h3>
+
 ```bash
 pip install -r requirements.txt
 ```
 
 <h3>4. Применение миграций</h3>
+
 ```bash
 python manage.py migrate
 ```
 
 <h3>5. Запуск сервера разработки</h3>
+
 ```bash
 python manage.py runserver
 ```
 
 <h3>6. Запуск тестов</h3>
+
 ```bash
 python manage.py test
 ```
